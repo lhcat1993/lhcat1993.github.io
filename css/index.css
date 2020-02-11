@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding:0;
+}
+canvas {
+  width: 100%;
+  height: 85%;
+}
+html,body{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    font-weight: 900;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    background: url("../images/bg1.jpg") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.type{
+    width: 100%;
+  height: 200px;
+  font-size: 50px;
+  font-weight: 900;
+  position: absolute;
+  color: rgb(233,127,175);
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -50%;
+  text-align: center;
+  z-index: 10;
+}
+.textCon{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width:700px;
+    height:60px;
+    margin:50px auto;
+    font-size:48px;
+}
+.heart{
+    width:160px;
+    height:160px;
+    background-color:#cc2a5d;
+    right: 90px;
+    top: 100px;
+    margin-left: -100px;
+    position: absolute;
+    transform: rotate(45deg);
+    animation: heart 1s ease-in infinite;
+}
+.heart::before,
+.heart::after{
+    content:'';
+    width:100%;
+    height:100%;
+    background-color:#cc2a5d;
+    border-radius: 50%;
+}
+.heart::before{
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translateX(-50%);
+}
+.heart::after{
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translateY(-50%);
+}
+@keyframes heart{
+    0%{
+        transform: scale(0.8) rotate(45deg);
+        opacity: 0.8;
+    }
+    50%{
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0.8) rotate(45deg);
+        opacity: 0.8;
+    }
+}
+.textCon{
+    z-index: 999;
+}
+.textCon .item{
+    position: absolute;
+    opacity: 0;
+    background-color:#cc2a5d;
+    transform: rotate(45deg);
+    animation: hearts 3s ease-in infinite;
+    z-index: 999;
+}
+.textCon .item::before,
+.textCon .item::after{
+    content:'';
+    width:100%;
+    height:100%;
+    background-color:#cc2a5d;
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 50%;
+}
+.textCon .item::before{
+    transform: translateX(-50%);
+}
+.textCon .item::after{
+    transform: translateY(-50%);
+}
+@keyframes hearts{
+    0%{
+        opacity: 0;
+        transform: translateY(0%) rotate(45deg);
+    }
+    20%{
+        opacity: 0.8;
+        transform: translateY(-20%) rotate(45deg);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-1000%) rotate(45deg);
+    }
+}
+.days-label {
+    font-size: 30px;
+}
+
+.seconds {
+    margin-top: 10px;
+    /*font-size: 32px;*/
+    font-family: "Monda_bo", Georgia, sans-serif;
+    width: auto;
+    text-align: center;
+}
+
+.seconds-label {
+    margin-top: 32px;
+    /*font-size: 32px;*/
+    font-family: "Monda_no", Georgia, sans-serif;
+    width: auto;
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+}
+.days {
+    font-size: 40px;
+    width: auto;
+    text-align: center;
+}
+.words {
+    font-size: 50px;
+    font-family: 'Regular', cursive;
+    width: auto;
+    text-align: center;
+}
+.hello{
+    width: 352px;
+    height: 153px;
+    opacity: 0;
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    margin-left: -176px;
+    animation:hello 10s;
+}
+@keyframes hello{
+    0%{opacity: 1}
+    100%{opacity: 0}
+}
+.hand{
+  width: 250px;
+  height: 250px;
+  border-radius: 150px;
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  margin:-115px -125px;
+  background: url("../images/hand1.jpg") no-repeat;
+  background-size: 100% 100%;
+  /*animation:hand 10s;*/
+}
+@keyframes hand{
+  0% {opacity: 0;bottom: 0;}
+  100%{opacity: 1;bottom: 9%;}
+}
+.peach{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    z-index: 999;
+}
+.peach1{
+    bottom: 0;
+    left: 0;
+    animation:pea1 10s;
+}
+.peach2{
+    bottom: 0;
+    right: 0;
+    animation:pea2 10s;
+}
+@keyframes pea1{
+    0%{left: -400px}
+    100%{left: 0}
+}
+@keyframes pea2{
+    0%{right: -400px}
+    100%{right: 0}
+}
